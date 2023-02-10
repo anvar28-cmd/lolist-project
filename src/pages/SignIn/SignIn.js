@@ -1,6 +1,53 @@
-function SignIn() {
+import axios from "axios";
+import { Link, Navigate, useNavigate } from "react-router-dom";
+import { AppRoute, ENDPOINT } from "../../const";
+import { saveToken } from "../../token";
+
+function SignIn({isAuthorized, setIsAuthorized}) {
+  const navigate = useNavigate();
+  
+  if (isAuthorized) {
+    return <Navigate to={ AppRoute.HOME } />;
+  }
+
+  const handleFormSubmit = (evt) => {
+    evt.preventDefault();
+
+    axios
+      .post(`${ENDPOINT}/login`, {
+        username: evt.target.username.value,
+        password: evt.target.password.value,
+      })
+      .then((response) => {
+        saveToken(response.data.token);
+        setIsAuthorized(true);
+        navigate(AppRoute.HEROES)
+      })
+      .catch((error) => {
+        console.log(`Error: ${error}`);
+      });
+  };
+
   return (
-    <div>SignIn</div>
+    <main className="sign-in">
+      <h1 className="sign-in__title">Sign In</h1>
+
+      <form className="form" onSubmit={handleFormSubmit}>
+        <div className="form__element">
+          <label className="form__label" htmlFor="username">Username:</label>
+          <input className="form__field" id="username" type="text" name="username" />
+        </div>
+
+        <div className="form__element">
+          <label className="form__label" htmlFor="password">Password:</label>
+          <input className="form__field" id="password" type="password" name="password" />
+        </div>
+
+        <p>Not registered yet? <Link to={AppRoute.SIGN_UP}>Sign up</Link></p>
+
+        <button className="form__submit" type="submit">Sign In</button>
+      </form>
+    </main>
   );
 }
 

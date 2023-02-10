@@ -1,6 +1,13 @@
-function Header() {
+import { dropToken } from "../../token";
+
+function Header({setIsAuthorized}) {
+  const handleLogoutClick = () => {
+    setIsAuthorized(false);
+    dropToken();
+  };
+
   return (
-    <div>Header</div>
+    <button onClick={handleLogoutClick} type="button">Logout</button>
   )
 }
 

@@ -1,7 +1,8 @@
+import { Navigate } from "react-router-dom";
+import { AppRoute } from "../../const";
+
 function Home() {
-  return (
-    <div>Home</div>
-  );
+  return <Navigate to={AppRoute.HEROES} />;
 }
 
 export default Home;
