@@ -2,3 +2,9 @@
 @import './partials/variables';
 @import './partials/mixins';
 @import './partials/global';
+
+
+@import '../components/Header/Header.scss';
+@import '../components/HeroCard/HeroCard.scss';
+@import '../components/HeroesList/HeroesList.scss';
+@import '../pages/Heroes/Heroes.scss';

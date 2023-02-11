@@ -1,0 +1,17 @@
+.heroes-wrapper {
+  
+}
+
+.heroes-list {
+  list-style: none;
+  margin: 0 auto;
+  padding: 80px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+  width: max-content;
+  border-radius: 8px;
+  background-color: darken(#fff, 32%);
+  max-height: 920px;
+  overflow-y: scroll;
+}

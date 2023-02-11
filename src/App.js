@@ -36,7 +36,7 @@ function App() {
       <Routes>
         <Route path={AppRoute.SIGN_IN} element={<SignIn isAuthorized={isAuthorized} setIsAuthorized={setIsAuthorized} />}/>
         <Route path={AppRoute.SIGN_UP} element={<SignUp isAuthorized={isAuthorized} setIsAuthorized={setIsAuthorized} />}/>
-
+        
         <Route path={AppRoute.HOME} element={<Layout setIsAuthorized={setIsAuthorized} />}>
           <Route
             index 

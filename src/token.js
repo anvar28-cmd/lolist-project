@@ -1,3 +1,5 @@
+import axios from "axios";
+
 const AUTH_TOKEN_KEY_NAME = 'lol-ist-token';
 
 export const getToken = () =>
@@ -9,3 +11,12 @@ export const saveToken = (token) =>
 export const dropToken = () =>
   localStorage.removeItem(AUTH_TOKEN_KEY_NAME);
 
+
+ export const getWithToken = (path) => {
+      const token = getToken();
+      return axios.get(path, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+    }
