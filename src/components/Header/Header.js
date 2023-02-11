@@ -10,23 +10,27 @@ function Header({setIsAuthorized}) {
     getWithToken(`${ENDPOINT}/profile`)
       .then(({ data }) => {
         setProfile(data);
-        console.log(data);
       })
       .catch(() => {
         console.log("something has gone terribly wrong");
       });
   }, []);
-console.log(profile);
+  
   const handleLogoutClick = () => {
     setIsAuthorized(false);
     dropToken();
   };
 
   return (
-    <>
+    <header className="header">
       {profile && <h2>Welcome, {profile.username}!</h2>}
-      <button className="button-header" onClick={handleLogoutClick} type="button">Logout</button>
-    </>
+      <button className="header__button"
+        onClick={handleLogoutClick}
+        type="button"
+      >
+        Logout
+      </button>
+    </header>
   )
 }
 

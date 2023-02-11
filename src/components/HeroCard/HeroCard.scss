@@ -1,7 +1,7 @@
 .hero-card {
+  position: relative;
   display: flex;
   flex-direction: column;
-  width: 120px;
 }
 
 .hero-card__image {
@@ -19,8 +19,29 @@
   font-weight: 700;
   line-height: 1;
   text-align: center;
+  color: #f3b634;
+  letter-spacing: 1px;
 }
 
 .hero-card__inner {
+  background: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 8px 16px;
+  transform: translateY(140px);
+  z-index: 1;
+  width: 240px;
   display: none;
+  line-height: 1.3;
+
+  .hero-card:hover & {
+    position: fixed;
+    display: block;
+  }
+}
+
+.hero-card__title {
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 16px;
 }
