@@ -3,7 +3,7 @@ export const ENDPOINT = `${BASE_URL}`;
 
 export const AppRoute = {
   HOME: '/',
-  SIGN_IN: '/signin',
+  LOGIN: '/login',
   SIGN_UP: '/signup',
   HEROES: '/heroes',
   HEROES_SELECTED: '/heroes/:heroID',

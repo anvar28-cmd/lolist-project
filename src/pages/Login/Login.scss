@@ -1,0 +1,127 @@
+.sign-in {
+  position: relative;
+  min-height: 100vh;
+  background-image: url(../../assets/images/lol-sign-in.jpg);
+  background-position: right bottom;
+  background-size: 150%;
+  display: flex;
+  @include tablet-desktop {
+    position: relative;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../assets/images/lol-sign-in.jpg);
+    background-position: left top;
+    background-size: 148%;
+  }
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background: transparent;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 30px rgba(214, 48, 48, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include tablet-desktop {
+    position: relative;
+    width: 40rem;
+    height: auto;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.form-box {
+  width: 100%;
+  padding: 4rem;
+
+  &__title {
+    text-align: center;
+    color: $hextechgold3;
+  }
+}
+
+.form {
+  &__element {
+    position: relative;
+    width: 100%;
+    height: 5rem;
+    border-bottom: 2px solid black;
+    margin: 3rem 0rem;
+  }
+
+  &__label {
+    position: absolute;
+    top: 20%;
+    left: 3.3rem;
+    transform: translate(-50%);
+    font-size: 1.5rem;
+    font-weight: 500;
+    transition: 0.5s;
+    color: $hextechgold3;
+    &--featured {
+      left: 2rem;
+    }
+  }
+  &__field {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    &:focus ~ label,
+    &:valid ~ label {
+      top: -1.4rem;
+    }
+  }
+  &__icon {
+    position: absolute;
+    right: 1rem;
+    font-size: 1em;
+    color: black;
+    line-height: 5.7rem;
+  }
+  &__submit {
+    width: 100%;
+    height: 4.5rem;
+    background: rgb(9,20,40);
+    background: linear-gradient(90deg, rgba(9,20,40,1) 0%, rgba(10,20,40,1) 100%);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.7rem;
+    color: $hextechgold1;
+    font-weight: 500;
+  }
+
+  &__switch {
+    font-size: 1.7rem;
+    text-align: center;
+    font-weight: 500;
+    margin: -1rem 0rem 1rem;
+    color: $hextechgold1;
+    font-weight: 400;
+    @include tablet-desktop {
+
+    }
+  }
+  &__link {
+    font-weight: 800;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

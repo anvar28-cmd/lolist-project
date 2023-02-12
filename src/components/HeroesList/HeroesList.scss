@@ -14,7 +14,7 @@
     top: 0;
     transform: translateY(-50%);
     font-size: 20px;
-    color: goldenrod;
+    color: $hextechgold3;
     font-weight: 700;
   }
 }
@@ -38,10 +38,10 @@
   }
 
   &::-webkit-scrollbar-track {
-    background-color: rgb(106 222 228 / 40%);
+    background-color: $hextechblue3;
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: rgb(106 222 228 / 60%);
+    background-color:$hextechblue2;
   }
 }

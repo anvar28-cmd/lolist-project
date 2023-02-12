@@ -14,7 +14,7 @@ html {
 body {
   font-family: "CairoPlay";
   font-size: 1.6rem;
-  
+  color: $hextechblack;
 }
 
 img {
@@ -27,6 +27,7 @@ p {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 ul {
@@ -53,11 +54,8 @@ li {
 .container {
   margin: 0 16px;
 
-  @include tablet {
+  @include tablet-desktop {
     margin: 0 32px;
-  }
-
-  @include desktop {
     width: 100%;
     max-width: 1020px;
     margin: 0 auto;

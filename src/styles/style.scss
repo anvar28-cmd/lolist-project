@@ -4,7 +4,13 @@
 @import './partials/global';
 
 
+@import '../pages/Login/Login.scss';
 @import '../components/Header/Header.scss';
 @import '../components/HeroCard/HeroCard.scss';
 @import '../components/HeroesList/HeroesList.scss';
 @import '../pages/Heroes/Heroes.scss';
+@import '../pages/HeroesSelected/HeroesSelected.scss';
+@import '../components/ItemList/ItemList.scss';
+@import '../components/ItemCard/ItemCard.scss';
+@import '../components/SpellList/SpellsList.scss';
+@import '../components/SpellCard/SpellCard.scss';

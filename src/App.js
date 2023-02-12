@@ -8,7 +8,7 @@ import HeroesSelected from './pages/HeroesSelected/HeroesSelected';
 import Home from './pages/Home/Home';
 import Layout from './pages/Layout/Layout';
 import NotFound from './pages/NotFound/NotFound';
-import SignIn from './pages/SignIn/SignIn';
+import Login from './pages/Login/Login';
 import SignUp from './pages/SignUp/SignUp';
 import './styles/style.scss';
 import { getToken } from './token';
@@ -34,7 +34,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path={AppRoute.SIGN_IN} element={<SignIn isAuthorized={isAuthorized} setIsAuthorized={setIsAuthorized} />}/>
+        <Route path={AppRoute.LOGIN} element={<Login isAuthorized={isAuthorized} setIsAuthorized={setIsAuthorized} />}/>
         <Route path={AppRoute.SIGN_UP} element={<SignUp isAuthorized={isAuthorized} setIsAuthorized={setIsAuthorized} />}/>
         
         <Route path={AppRoute.HOME} element={<Layout setIsAuthorized={setIsAuthorized} />}>

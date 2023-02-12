@@ -5,7 +5,7 @@ function PrivateRoute({ children, isAuthorized }) {
   return (
     isAuthorized
       ? children
-      : <Navigate to={ AppRoute.SIGN_IN } />
+      : <Navigate to={ AppRoute.LOGIN } />
   );
 }
 

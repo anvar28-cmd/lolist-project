@@ -1,0 +1,35 @@
+import { useRef } from "react";
+import GoldIcon from "../Icons/GoldIcon";
+
+function ItemCard({item}) {
+    const {name, image, plaintext, gold} = item;
+    const ref = useRef(null);
+
+    const handleSubmit = (evt) => {
+
+    };
+
+    const handkeMouseEnter = (evt) => {
+
+    }
+
+  return (
+    <>
+    <div className="item-card" onClick={handleSubmit} onMouseEnter={handkeMouseEnter}>
+        <img className="item-card__image"
+        src={`http://ddragon.leagueoflegends.com/cdn/13.1.1/img/item/${image}`}
+        width={64}
+        height={64}
+        alt={name}
+        />
+        <h3 className="item-card__name">{name}</h3>
+    </div>
+    <div ref={ref} className='item-card__inner visually-hidden'>
+        <p className="item-card__plaintext">{plaintext}</p>
+        <p className="item-card__price">Price:{gold}<GoldIcon /></p>
+    </div>
+    </>
+  )
+}
+
+export default ItemCard
