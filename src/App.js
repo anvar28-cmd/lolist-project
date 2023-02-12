@@ -15,22 +15,6 @@ import { getToken } from './token';
 
 function App() {
   const [isAuthorized, setIsAuthorized] = useState(getToken());
-
-  // const [isUserLoggedIn, setIsUserLoggedIn] = useState(
-  //   !!sessionStorage.bearerToken
-  // );
-
-  // function onLogin(token) {
-  //   sessionStorage.setItem("bearerToken", token);
-  //   setIsUserLoggedIn(true);
-  // }
-
-  // function onLogout() {
-  //   sessionStorage.removeItem("bearerToken");
-  //   setIsUserLoggedIn(false);
-  // }
-
-  // console.log(sessionStorage.bearerToken);
   return (
     <BrowserRouter>
       <Routes>

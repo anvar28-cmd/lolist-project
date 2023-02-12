@@ -1,13 +1,21 @@
 .heroes-selected {
-    position: relative;
-    min-width: 100vw;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    background-image: url("../../assets/images/orn-item.jpg");
-    background-position: center;
-    
-  }
-  
+  position: relative;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-image: url("../../assets/images/orn-item.jpg");
+  background-position: center;
+}
+
+.heroes-selected__container {
+  display: flex;
+  max-width: 1200px;
+  margin: 120px auto;
+  gap: 40px;
+}
+
+.heroes-selected__right {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 40px;
+}
