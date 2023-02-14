@@ -1,0 +1,20 @@
+.builds-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.builds-list__item {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.builds-list__item-button {
+  margin-top: 18px;
+  margin-right: auto;
+  margin-left: auto;
+}

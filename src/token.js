@@ -20,3 +20,11 @@ export const dropToken = () =>
         },
       });
     }
+    export const postWithToken = (path, payload = {}) => {
+      const token = getToken();
+      return axios.post(path, payload, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+    }

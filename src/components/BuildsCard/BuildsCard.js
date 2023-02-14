@@ -65,13 +65,13 @@ function buildssCard({selectedItems, selectedSpells, hanleBuildsCardSubmit, hanl
           type="reset"
           onClick={hanleBuildsCardReset}
         >
-          Cancel
+          Clear
         </button>
         <button 
           className="builds-card__button" 
           type="submit"
         >
-          Submit
+          Save Build
         </button>
       </div>
     </form>

@@ -1,6 +1,13 @@
+import Board from '../../components/Board/Board';
+import BuildsList from '../../components/BuildsList/BuildsList';
+
 function Builds() {
   return (
-    <div>Builds</div>
+    <main className="builds">
+      <Board title="Saved Builds">
+        <BuildsList />
+      </Board>
+    </main>
   );
 }
 

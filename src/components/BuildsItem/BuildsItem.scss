@@ -1,0 +1,40 @@
+.builds-item__name {
+  font-size: 14px;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.builds-item__inner {
+  border: 1px solid rgba(goldenrod, 32%);
+  border-radius: 4px;
+  padding: 16px;
+  padding-left: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.builds-item__cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+}
+
+.builds-item__card-image {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: rgba(goldenrod, 16%);
+  border: 1px solid rgba(goldenrod, 32%);
+  text-indent: 100%;
+}
+
+.builds-item__card-name {
+  word-wrap: break-word;
+  font-size: 12px;
+  text-align: center;
+}

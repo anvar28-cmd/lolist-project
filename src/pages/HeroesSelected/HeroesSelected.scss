@@ -4,6 +4,8 @@
   min-height: 100vh;
   background-image: url("../../assets/images/orn-item.jpg");
   background-position: center;
+  background-size: cover;
+  overflow: hidden;
 }
 
 .heroes-selected__container {

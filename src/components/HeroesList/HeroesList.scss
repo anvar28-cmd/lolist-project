@@ -1,11 +1,12 @@
 .heroes-wrapper {
   position: relative;
-  padding: 80px;
-  padding-right: 40px;
-  width: 900px;
-  height: 816px;
-  background-color: rgb(106 222 228 / 20%);
+  padding: 5rem;
+  padding-right: 2.5rem;
+  width: 83.4rem;
+  height: 63.1rem;
+  background-color: rgba(106, 222, 228, 0.2);
   border-radius: 8px;
+  top: 1rem;
 
   &::after {
     content: "Champions";

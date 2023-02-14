@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import { AppRoute } from './const';
 import Builds from './pages/Builds/Builds';
 import Heroes from './pages/Heroes/Heroes';
@@ -15,45 +14,48 @@ import { getToken } from './token';
 
 function App() {
   const [isAuthorized, setIsAuthorized] = useState(getToken());
+
   return (
     <BrowserRouter>
       <Routes>
-        <Route path={AppRoute.LOGIN} element={<Login isAuthorized={isAuthorized} setIsAuthorized={setIsAuthorized} />}/>
-        <Route path={AppRoute.SIGN_UP} element={<SignUp isAuthorized={isAuthorized} setIsAuthorized={setIsAuthorized} />}/>
+        <Route 
+          path={AppRoute.LOGIN} 
+          element={
+            <Login 
+              isAuthorized={isAuthorized} 
+              setIsAuthorized={setIsAuthorized} 
+            />
+          }
+        />
+
+        <Route 
+          path={AppRoute.SIGN_UP} 
+          element={
+            <SignUp 
+              isAuthorized={isAuthorized} 
+              setIsAuthorized={setIsAuthorized} 
+            />
+          }
+        />
         
-        <Route path={AppRoute.HOME} element={<Layout setIsAuthorized={setIsAuthorized} />}>
-          <Route
-            index 
-            element={
-              <PrivateRoute isAuthorized={isAuthorized}>
-                <Home />
-              </PrivateRoute>
-            } 
-          />
-          <Route 
-            path={AppRoute.HEROES}
-            element={
-              <PrivateRoute isAuthorized={isAuthorized}>
-                <Heroes />
-              </PrivateRoute>
-            } 
-          />
-          <Route 
-            path={AppRoute.HEROES_SELECTED}
-            element={
-              <PrivateRoute isAuthorized={isAuthorized}>
-                <HeroesSelected />
-              </PrivateRoute>
-            } 
-          />
-          <Route 
-            path={AppRoute.BUILDS}
-            element={
-              <PrivateRoute isAuthorized={isAuthorized}>
-                <Builds />
-              </PrivateRoute>
-            } 
-          />
+        <Route 
+          path={AppRoute.HOME} 
+          element={
+            <Layout 
+              isAuthorized={isAuthorized} 
+              setIsAuthorized={setIsAuthorized} 
+            />
+          }
+        >
+          <Route index element={<Home />} />
+
+          <Route path={AppRoute.HEROES} element={<Heroes />} />
+
+          <Route path={AppRoute.HEROES_SELECTED} element={<HeroesSelected isAuthorized={isAuthorized} 
+              setIsAuthorized={setIsAuthorized} />} />
+
+          <Route path={AppRoute.BUILDS} element={<Builds isAuthorized={isAuthorized} 
+              setIsAuthorized={setIsAuthorized} />} />
         </Route>
 
         <Route path={AppRoute.NOT_FOUND} element={<NotFound />}/>
