@@ -15,7 +15,7 @@ function HeroCard({ hero }) {
       onMouseEnter={handleMouseEnter}
     >
       <img className="hero-card__image"
-        src={`http://ddragon.leagueoflegends.com/cdn/13.1.1/img/champion/${image}`}
+        src={image}
         width={120}
         height={120}
         alt={name}

@@ -13,7 +13,7 @@ function ItemCard({item, handleItemsClick}) {
     <>
       <div className="item-card" onClick={handleItemsClick(item)} onMouseEnter={handkeMouseEnter}>
         <img className="item-card__image"
-          src={`http://ddragon.leagueoflegends.com/cdn/13.1.1/img/item/${image}`}
+          src={image}
           width={64}
           height={64}
           alt={name}

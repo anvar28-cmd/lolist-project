@@ -5,16 +5,18 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
-}
-
-.builds-list__item {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-
-.builds-list__item-button {
-  margin-top: 18px;
-  margin-right: auto;
-  margin-left: auto;
+  &__item {
+    display: flex;
+    flex-direction: column;
+    @include medium {
+      align-items: center;
+      flex-direction: row;
+      gap: 24px;
+    }
+  }
+  &__item-button {
+    margin-top: 1.8rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }

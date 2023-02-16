@@ -6,6 +6,10 @@
   font-family: inherit;
 }
 
+:root {
+  --board-color: rgba(106, 222, 228, 24%);
+  --board-color: rgba(255, 255, 255, 24%);
+}
 
 html {
   font-size: 62.5%;
@@ -19,6 +23,7 @@ body {
 }
 
 img {
+  display: block;
   max-width: 100%;
 }
 
@@ -53,14 +58,9 @@ li {
 }
 
 .container {
-  margin: 0 16px;
-
-  @include tablet-desktop {
-    margin: 0 32px;
-    width: 100%;
-    max-width: 1020px;
-    margin: 0 auto;
-  }
+  width: 90vw;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 #root {
@@ -82,8 +82,8 @@ li {
   border: none;
   min-height: 36px;
   text-transform: uppercase;
-  background-color: goldenrod;
-  box-shadow: 0 4px 8px rgba(goldenrod, 32%);
+  background-color: $hextechgold3;
+  box-shadow: 0 4px 8px rgba($hextechgold3, 32%);
   cursor: pointer;
   transition: .3s;
 

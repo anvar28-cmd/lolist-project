@@ -2,22 +2,39 @@
   position: relative;
   min-width: 100vw;
   min-height: 100vh;
-  background-image: url("../../assets/images/orn-item.jpg");
-  background-position: center;
-  background-size: cover;
-  overflow: hidden;
+  
+  &::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background-image: url("../../assets/images/orn-item.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include medium {
+      max-width: 1200px;
+      flex-direction: row;
+      margin: 120px auto;
+      gap: 40px;
+      align-items: start;
+    }
+  
+    }
+    &__right {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      gap: 40px;
+    }
 }
 
-.heroes-selected__container {
-  display: flex;
-  max-width: 1200px;
-  margin: 120px auto;
-  gap: 40px;
-}
 
-.heroes-selected__right {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  gap: 40px;
-}

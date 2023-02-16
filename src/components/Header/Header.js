@@ -22,9 +22,9 @@ function Header({setIsAuthorized}) {
   };
 
   return (
-    <header className="header">
-      {profile && <h2>Welcome summoner, {profile.username}!</h2>}
-      <button className="header__button"
+    <header className="header container">
+      {profile && <h2 className="header__title">Welcome summoner, {profile.username}!</h2>}
+      <button className="button"
         onClick={handleLogoutClick}
         type="button"
       >

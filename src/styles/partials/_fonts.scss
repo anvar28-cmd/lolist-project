@@ -1,9 +1,25 @@
 @font-face {
   font-family: "CairoPlay";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/CairoPlay-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "CairoPlay";
   font-weight: 400;
   font-style: normal;
   font-display: swap;
   src: url("../../assets/fonts/CairoPlay-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "CairoPlay";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/CairoPlay-Medium.ttf") format("truetype");
 }
 
 @font-face {
@@ -16,48 +32,16 @@
 
 @font-face {
   font-family: "CairoPlay";
-  font-weight: 200;
+  font-weight: 800;
   font-style: normal;
   font-display: swap;
-  src: url("../../assets/fonts/CairoPlay-ExtraLight.ttf") format("truetype");
+  src: url("../../assets/fonts/CairoPlay-ExtraBold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "CairoPlay";
-  font-weight: 300;
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
-  src: url("../../assets/fonts/CairoPlay-Light.ttf") format("truetype");
+  src: url("../../assets/fonts/CairoPlay-Black.ttf") format("truetype");
 }
-
-@font-face {
-  font-family: "CairoPlay";
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-  src: url("../../assets/fonts/CairoPlay-Medium.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "CairoPlay";
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-    src: url("../../assets/fonts/CairoPlay-SemiBold.ttf") format("truetype");
-  }
-
-  @font-face {
-    font-family: "CairoPlay";
-    font-weight: 800;
-    font-style: normal;
-    font-display: swap;
-    src: url("../../assets/fonts/CairoPlay-ExtraBold.ttf") format("truetype");
-  }
-
-  @font-face {
-    font-family: "CairoPlay";
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-    src: url("../../assets/fonts/CairoPlay-Black.ttf") format("truetype");
-  }

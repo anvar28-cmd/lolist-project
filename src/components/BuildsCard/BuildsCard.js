@@ -16,19 +16,20 @@ function buildssCard({selectedItems, selectedSpells, hanleBuildsCardSubmit, hanl
               return (
                 <li key={index} className="builds-card__list-item">
                   <img 
-                    src={`http://ddragon.leagueoflegends.com/cdn/13.1.1/img/item/${selectedItems[index].image}`}
+                    src={selectedItems[index].image}
                     width={40}
                     height={40} 
+                    alt=''
                   />
-                  <p>{selectedItems[index].name}</p>
+                  <p className="builds-card__p-text">{selectedItems[index].name}</p>
                 </li>
               );
             }
 
             return (
               <li key={index} className="builds-card__list-item">
-                <img src="" width={40} height={40} />
-                <p>Item {index + 1}</p>
+                <img src="" width={40} height={40} alt=''/>
+                <p className="builds-card__p-text">Item {index + 1}</p>
               </li>
             );
           })}
@@ -40,19 +41,20 @@ function buildssCard({selectedItems, selectedSpells, hanleBuildsCardSubmit, hanl
               return (
                 <li key={index} className="builds-card__list-item">
                   <img 
-                    src={`http://ddragon.leagueoflegends.com/cdn/13.3.1/img/spell/${selectedSpells[index].image}`}
+                    src={selectedSpells[index].image}
                     width={40}
-                    height={40} 
+                    height={40}
+                    alt={selectedSpells[index].name} 
                   />
-                  <p>{selectedSpells[index].name}</p>
+                  <p className="builds-card__p-text">{selectedSpells[index].name}</p>
                 </li>
               );
             }
 
             return (
               <li key={index} className="builds-card__list-item">
-                <img src="" width={40} height={40} />
-                <p>Item {index + 1}</p>
+                <img src="" width={40} height={40} alt='' />
+                <p className="builds-card__p-text">Item {index + 1}</p>
               </li>
             );
           })}
@@ -61,14 +63,14 @@ function buildssCard({selectedItems, selectedSpells, hanleBuildsCardSubmit, hanl
 
       <div className="builds-card__buttons">
         <button 
-          className="builds-card__button" 
+          className="button builds-card__button" 
           type="reset"
           onClick={hanleBuildsCardReset}
         >
           Clear
         </button>
         <button 
-          className="builds-card__button" 
+          className="button builds-card__button" 
           type="submit"
         >
           Save Build

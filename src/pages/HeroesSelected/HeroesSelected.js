@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { generatePath, Link, useParams } from "react-router-dom";
+import { generatePath, Link, useNavigate, useParams } from "react-router-dom";
 import HeroCard from "../../components/HeroCard/HeroCard";
 import BuildsCard from "../../components/BuildsCard/BuildsCard";
 import ItemList from "../../components/ItemList/ItemList";
@@ -11,6 +11,7 @@ import { postWithToken } from "../../token";
 function HeroesSelected( {setIsAuthorized}) {
   const params = useParams();
   const heroID = params.heroID;
+  const navigate = useNavigate();
   const [hero, setHero] = useState(null);
   const [selectedItems, setSelectedItems] = useState([]);
   const [selectedSpells, setSelectedSpells] = useState([]);
@@ -30,15 +31,16 @@ function HeroesSelected( {setIsAuthorized}) {
   const hanleBuildsCardSubmit = (evt) => {
     evt.preventDefault();
 
+
     postWithToken(`${ENDPOINT}/build`, {
       hero_id: heroID,
       description: evt.target.description.value,
       items: selectedItems.map((x) => x.id),
       spells: selectedSpells.map((x) => x.id),
     })
-    .then((data) => {
-      console.log(data);
+    .then(() => {
       setIsAuthorized(true)
+      navigate(generatePath(AppRoute.BUILDS, {heroID: hero.id}))
     })
   };
 
@@ -75,7 +77,7 @@ function HeroesSelected( {setIsAuthorized}) {
           />
           {hero && (
             <Link
-              className="heroes-selected__path-build"
+              className="button heroes-selected__path-build"
               to={generatePath(AppRoute.BUILDS, { heroID: hero.id })}
             >
               {hero.name}'s Builds

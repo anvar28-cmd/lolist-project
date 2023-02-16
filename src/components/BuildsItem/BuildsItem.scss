@@ -1,40 +1,52 @@
-.builds-item__name {
-  font-size: 14px;
-  line-height: 1;
-  margin-bottom: 4px;
-}
+.builds-item {
+  &__name {
+    font-size: 1.6rem;
+    line-height: 1;
+    margin-bottom: 0.4rem;
+    color: $hextechgold1;
+    font-weight: 600;
+  }
+  &__inner {
+    border: 1px solid rgba($hextechgold3, 32%);
+    border-radius: 4px;
+    padding: 2.6rem;
+    padding-left: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 25rem;
+    width: 53rem;
+;
+  }
+  &__cards {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 16px;
+    justify-content: flex-end;
+  }
+  &_card {
+    color: $hextechgold3;
+  }
 
-.builds-item__inner {
-  border: 1px solid rgba(goldenrod, 32%);
-  border-radius: 4px;
-  padding: 16px;
-  padding-left: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
+  &__card-image {
+    display: block;
+    width: 4em;
+    height: 6rem;
+    border-radius: 4px;
+    background-color: rgba($hextechgold3, 16%);
+    border: 1px solid rgba($hextechgold3, 32%);
+    text-indent: 100%;
+  }
 
-.builds-item__cards {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 16px;
-  justify-content: flex-end;
-}
-
-.builds-item__card-image {
-  display: block;
-  width: 40px;
-  height: 40px;
-  border-radius: 4px;
-  background-color: rgba(goldenrod, 16%);
-  border: 1px solid rgba(goldenrod, 32%);
-  text-indent: 100%;
-}
-
-.builds-item__card-name {
-  word-wrap: break-word;
-  font-size: 12px;
-  text-align: center;
+  &__card-name {
+    word-wrap: break-word;
+    font-size: 1.3rem;
+    text-align: center;
+    max-width: 55px;
+    line-height: 1.2;
+    color: $hextechgold1;
+    font-weight: 400;
+  }
 }

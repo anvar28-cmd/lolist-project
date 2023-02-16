@@ -1,12 +1,18 @@
 .heroes {
-  position: relative;
-  min-width: 100vw;
-  min-height: 100vh;
+  padding-bottom: 80px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  background-image: url("../../assets/images/lol-1.jpg");
-  background-position: left top;
-  background-size: 148%;
+  
+  &::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background-image: url("../../assets/images/lol-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 }

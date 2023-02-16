@@ -1,4 +1,5 @@
 import axios from "axios";
+import { useState } from "react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import LockIcon from "../../components/Icons/LockIcon";
 import UserIcon from "../../components/Icons/UserIcon";
@@ -8,6 +9,7 @@ import { saveToken } from "../../token";
 function Login({ isAuthorized, setIsAuthorized }) {
   const navigate = useNavigate();
 
+  const [error, setError] = useState();
   if (isAuthorized) {
     return <Navigate to={AppRoute.HOME} />;
   }
@@ -26,7 +28,7 @@ function Login({ isAuthorized, setIsAuthorized }) {
         navigate(AppRoute.HEROES);
       })
       .catch((error) => {
-        console.log(`Error: ${error}`);
+        setError(`Error: ${error}`);
       });
   };
 
@@ -79,6 +81,7 @@ function Login({ isAuthorized, setIsAuthorized }) {
             <button className="form__submit" type="submit">
               Login
             </button>
+            {error && <div className="form__error">incorrect username or password</div>}
           </form>
         </div>
       </div>

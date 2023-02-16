@@ -2,32 +2,47 @@
   position: relative;
   display: flex;
   flex-direction: column;
-}
+  align-self: center;
+  @include medium {
+    width: 30rem;
+    height: 14rem;
+    align-self: flex-start;
+    position: relative;
+    top: -10rem;
+  }
+  
+  &__image {
+    display: flex;
+    height: auto;
 
-.hero-card__image {
-  display: flex;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1/1;
-  object-fit: cover;
-  margin-bottom: 4px;
-  border-radius: 8px;
-}
+    object-fit: cover;
+    margin-bottom: 0.4rem;
+    border-radius: 8px;
+    @include medium {
+    }
+  }
 
-.hero-card__name {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1;
-  text-align: center;
-  color: #f3b634;
-  letter-spacing: 1px;
+  &__name {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    color: $hextechgold3;
+    letter-spacing: 1px;
+  }
+
+  &__title {
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 1.6rem;
+  }
 }
 
 .hero-card__inner {
   background: #fff;
   border-radius: 4px;
   font-size: 14px;
-  padding: 8px 16px;
+  padding: 0.8rem 1.6rem;
   transform: translateY(140px);
   z-index: 1;
   width: 240px;
@@ -38,10 +53,4 @@
     position: fixed;
     display: block;
   }
-}
-
-.hero-card__title {
-  font-weight: 700;
-  text-transform: capitalize;
-  font-size: 16px;
 }
