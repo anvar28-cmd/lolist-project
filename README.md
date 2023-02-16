@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# LoLiST APP
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to LoList or League of Legend List: Item Builder. LoList will be as an add-on to the famous MOBA game called League of Legends. This site offers variety of latest content, Including champions, Items and spells.
 
-## Available Scripts
+## Tech Stack
 
-In the project directory, you can run:
+Client: React, HTML, CSS, SCSS, JV
 
-### `npm start`
+Server: Node, Express, mySQL
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
+- User Login
+- Explore Champions
+- Explore Items
+- Item Build
+- Save your build in your account
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
+First, open your vscode or code-editor.
+Then, open your terminal and follow below instructions
 
-### `npm test`
+## Steps
+### 1) Clone the repositories
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+    git clone https://github.com/shimazu28/lolist-project.git
+    git clone https://github.com/shimazu28/lolist-project-backend.git
+```
+### 2) Install all dependencies for both repositories(server, client)
+```
+    npm install 
 
-### `npm run build`
+```
+### 3) Install mySQL and create your username and password.
+- After installation, open MySQL Workbench
+- In schema area, right click on it and create new Schema and call it "lolist"
+- You may close the workbench and open knexfile.js in backend
+```
+    module.exports = {
+    
+  client: 'mysql',
+  connection: {
+    host: "127.0.0.1",
+    database: 'lolist',
+    user:     'root',
+    password: 'rootroot'
+  },
+};
+```
+- Make sure to put your correct user and password
+- Open your code-editor and open your terminal in server repository
+- Write these commands below to migrate and populate with seeds our database
+- Run the server
+```
+npx knex migrate:latest
+npx knex seed:run
+node --watch server
+```
+### 4) Create .env in both folders(client and server)
+- Open .env in client side and copy this
+```
+REACT_APP_BASE_URL=http://localhost:8888
+```
+- Open .env in server side and copy this
+```
+PORT=8888
+SECRET_KEY=
+ALLOWED_ORIGIN=http://localhost:3000
+```
+You may include own secret key by generating a secret key you can run this line of code in the Terminal: 
+```
+node -e "console.log(require('crypto').randomBytes(32).toString('hex'));"
+```
+Make sure to include the output in SECRET_KEY value
+### 5) Run your react app in client repository
+```
+npm run
+```
+## API Reference
+#### Items
+http://ddragon.leagueoflegends.com/cdn/13.1.1/data/en_US/item.json
+#### Champions
+http://ddragon.leagueoflegends.com/cdn/13.1.1/data/en_US/champion.json
+#### Spells
+http://ddragon.leagueoflegends.com/cdn/13.1.1/data/en_US/summoner.json
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Screenshots
+![Capture1](https://user-images.githubusercontent.com/48660175/219293373-42cc463b-6119-4bf0-97b4-404c80b0038b.PNG)
+![Capture2](https://user-images.githubusercontent.com/48660175/219293465-590b7004-f6e1-449c-87ad-a7b5aaa94b83.PNG)
+![Capture3](https://user-images.githubusercontent.com/48660175/219293529-6871269c-d5e0-4712-bf82-feb5e138b74c.PNG)
+![Capture4](https://user-images.githubusercontent.com/48660175/219293534-90df9253-8c3f-472f-b041-850a66392bc0.PNG)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🤝 Support
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Give a ⭐️ if you like this project!
