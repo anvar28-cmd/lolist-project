@@ -74,7 +74,7 @@ node -e "console.log(require('crypto').randomBytes(32).toString('hex'));"
 Make sure to include the output in SECRET_KEY value
 ### 5) Run your react app in client repository
 ```
-npm run
+npm start
 ```
 ## API Reference
 #### Items
