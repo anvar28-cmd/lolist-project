@@ -30,5 +30,4 @@ function Card({card, handleCardClick}) {
     </div>
   );
 }
-
 export default Card;

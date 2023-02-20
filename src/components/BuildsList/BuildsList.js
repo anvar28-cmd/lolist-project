@@ -9,9 +9,6 @@ function BuildsList() {
   const heroID = params.heroID
   const [builds, setBuilds] = useState();
 
-  // console.log(heroID)
-  //  const number = builds.length
-
   useEffect(() => {
     getWithToken(`${ENDPOINT}/build/${heroID}`)
       .then(({ data }) => {

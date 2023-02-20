@@ -1,18 +1,15 @@
 import axios from "axios";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import LockIcon from "../../components/Icons/LockIcon";
 import PersonIcon from "../../components/Icons/PersonIcon";
 import UserIcon from "../../components/Icons/UserIcon";
 import { AppRoute, ENDPOINT } from "../../const";
 import { saveToken } from "../../token";
+import 'react-toastify/dist/ReactToastify.css';
 
-function SignUp({ isAuthorized, setIsAuthorized }) {
+function SignUp() {
   const navigate = useNavigate();
-
-  if (isAuthorized) {
-    return <Navigate to={AppRoute.HOME} />;
-  }
-
   const handleFormSubmit = (evt) => {
     evt.preventDefault();
 
@@ -24,8 +21,17 @@ function SignUp({ isAuthorized, setIsAuthorized }) {
       })
       .then((response) => {
         saveToken(response.data.token);
-        setIsAuthorized(true);
-        navigate(AppRoute.HEROES);
+        navigate(AppRoute.LOGIN);
+        toast.success('Success! Please enter again to login!', {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          });
       })
       .catch((error) => {
         console.log(`Error: ${error}`);

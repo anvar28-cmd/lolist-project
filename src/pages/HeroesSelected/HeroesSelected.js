@@ -7,6 +7,7 @@ import ItemList from "../../components/ItemList/ItemList";
 import SpellsList from "../../components/SpellList/SpellsList";
 import { AppRoute, ENDPOINT } from "../../const";
 import { postWithToken } from "../../token";
+import { toast } from "react-toastify";
 
 function HeroesSelected( {setIsAuthorized}) {
   const params = useParams();
@@ -41,6 +42,16 @@ function HeroesSelected( {setIsAuthorized}) {
     .then(() => {
       setIsAuthorized(true)
       navigate(generatePath(AppRoute.BUILDS, {heroID: hero.id}))
+      toast.success('Build was saved!', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
     })
   };
 

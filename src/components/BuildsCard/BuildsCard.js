@@ -17,8 +17,6 @@ function buildssCard({selectedItems, selectedSpells, hanleBuildsCardSubmit, hanl
                 <li key={index} className="builds-card__list-item">
                   <img 
                     src={selectedItems[index].image}
-                    width={40}
-                    height={40} 
                     alt=''
                   />
                   <p className="builds-card__p-text">{selectedItems[index].name}</p>
@@ -28,7 +26,7 @@ function buildssCard({selectedItems, selectedSpells, hanleBuildsCardSubmit, hanl
 
             return (
               <li key={index} className="builds-card__list-item">
-                <img src="" width={40} height={40} alt=''/>
+                <img src=""  alt=''/>
                 <p className="builds-card__p-text">Item {index + 1}</p>
               </li>
             );
@@ -42,8 +40,6 @@ function buildssCard({selectedItems, selectedSpells, hanleBuildsCardSubmit, hanl
                 <li key={index} className="builds-card__list-item">
                   <img 
                     src={selectedSpells[index].image}
-                    width={40}
-                    height={40}
                     alt={selectedSpells[index].name} 
                   />
                   <p className="builds-card__p-text">{selectedSpells[index].name}</p>
@@ -53,7 +49,7 @@ function buildssCard({selectedItems, selectedSpells, hanleBuildsCardSubmit, hanl
 
             return (
               <li key={index} className="builds-card__list-item">
-                <img src="" width={40} height={40} alt='' />
+                <img src="" alt='' />
                 <p className="builds-card__p-text">Item {index + 1}</p>
               </li>
             );

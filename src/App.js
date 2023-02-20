@@ -11,12 +11,26 @@ import Login from './pages/Login/Login';
 import SignUp from './pages/SignUp/SignUp';
 import './styles/style.scss';
 import { getToken } from './token';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [isAuthorized, setIsAuthorized] = useState(getToken());
 
   return (
+    
     <BrowserRouter>
+     <ToastContainer 
+  position="top-center"
+  autoClose={5000}
+  hideProgressBar={false}
+  newestOnTop={false}
+  closeOnClick
+  rtl={false}
+  pauseOnFocusLoss
+  draggable
+  pauseOnHover
+  theme="light"/>
       <Routes>
         <Route 
           path={AppRoute.LOGIN} 
