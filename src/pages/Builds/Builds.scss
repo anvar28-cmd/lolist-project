@@ -1,6 +1,7 @@
 .builds {
   padding-bottom: 80px;
   display: flex;
+  z-index: 1;
   
   &::before {
     content: "";
