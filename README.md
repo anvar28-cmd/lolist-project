@@ -1,6 +1,6 @@
 # LoLiST APP
 
-Welcome to LoList or League of Legend List: Item Builder. LoList will be as an add-on to the famous MOBA game called League of Legends. This site offers variety of latest content, Including champions, Items and spells.
+Welcome to LoList or League of Legend List: Item Builder. LoList is an add-on to the famous MOBA game called League of Legends. This site offers variety of latest content, Including champions, Items and spells.
 
 ## Tech Stack
 
